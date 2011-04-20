@@ -1,0 +1,7 @@
+*.o
+*.swp
+*.swo
+libetest.so
+a.out
+*.exe
+tags
