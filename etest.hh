@@ -7,7 +7,6 @@
 int RUN_ALL_TESTS();
 
 TestNode *addTest(TestFactoryBase *f);
-void failAssertion(const char* message, const char* fileName, int line);
 
 #define TEST_NAME(group, scenario) group##_##scenario##_test
 #define TEST(group, scenario) \

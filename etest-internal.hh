@@ -14,6 +14,7 @@ using std::cerr;
 #include <iostream.h>
 #endif
 
+void failAssertion(const char* message, const char* fileName, int line);
 struct TestEventNode;
 
 class TestCase {
@@ -52,12 +53,6 @@ typedef struct TestNode {
         if (next_) { delete next_; next_ = 0; }
     }
 } TestNode;
-
-static void failAssertion(const char* message, const char* fileName, int line)
-{
-    cerr << "Failure at \"" << fileName << ":" << line << "\". Message: " << message << endl;
-    throw "failed";
-}
 
 typedef struct TestEventNode {
     const char *message_;

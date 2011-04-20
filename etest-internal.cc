@@ -28,3 +28,9 @@ void TestCase::reportEvents(ostream &out) {
         event = event->next_;
     }
 }
+
+void failAssertion(const char* message, const char* fileName, int line)
+{
+    cerr << "Failure at \"" << fileName << ":" << line << "\". Message: " << message << endl;
+    throw "failed";
+}

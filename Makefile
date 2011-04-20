@@ -2,7 +2,7 @@ export TOP_DIR = $(shell pwd)
 
 CXX=g++
 CPPFLAGS=-fPIC
-CPPFLAGS+= -DLINUX -DPOSIX_THREADS -ggdb
+CPPFLAGS+= -DLINUX #-ggdb
 OBJDIR=${TOP_DIR}
 INCLUDES = -I$(TOP_DIR)
 LINKER_FLAGS = -shared -ggdb
